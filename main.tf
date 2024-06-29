@@ -262,12 +262,4 @@ resource "aws_network_acl" "vpc2_acl" {
   }
 }
 
-# VPC Endpoints
-resource "aws_vpc_endpoint" "s3_endpoint" {
-  vpc_id       = aws_vpc.vpc2.id
-  service_name = "com.amazonaws.us-west-2.s3"
-  tags = {
-    Name = "S3 Endpoint"
-  }
-}
 
